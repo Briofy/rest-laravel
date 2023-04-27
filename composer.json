@@ -1,0 +1,27 @@
+{
+    "name": "briofy/rest-laravel",
+    "description": "The Restfull API Responds Package for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Briofy\\RestLaravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mam Mad",
+            "email": "mmd@briofy.net"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Briofy\\RestLaravel\\Providers\\BriofyServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.9"
+    }
+}
