@@ -163,9 +163,10 @@ trait Respond
         );
     }
 
-    protected function respondUnauthorized(?string $message = null): JsonResponse
+    protected function respondUnauthorized(?\Exception $exception = null, ?string $message = null): JsonResponse
     {
         return $this->respondWithError(
+            $exception ?? new \Exception(__('rest.respond.unauthorized')),
             $message ?? __('rest.respond.unauthorized'),
             status: Response::HTTP_UNAUTHORIZED
         );
